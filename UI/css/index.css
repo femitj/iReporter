@@ -22,9 +22,29 @@ header {
     color: white;
     font: normal 22px "K2D", sans-serif;
   }
+
+  header ul {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  header li {
+    display: inline;
+    padding: 0px 20px 0px 10px;
+  }
   
   #header-title {
     float: left;
+  }
+  
+  #header-title img {
+    margin-top: 5px;
+    height: 50px;
+  }
+
+  header nav {
+    float: right;
+    margin-top: 10px;
   }
 
   
@@ -44,7 +64,23 @@ header {
 }
   
 .btn:hover {
-  background-image: linear-gradient(to left, gray, green);
+  background-image: linear-gradient(to left, rgb(73, 74, 76), green);
 }
   
+/* Footer */
+
+footer {
+    font-family: "K2D", sans-serif;
+    background-image: linear-gradient(
+      to top,
+      rgb(73, 74, 76),
+      rgb(181, 189, 201)
+    );
+    min-height: 65px;
+    margin-top: 50px;
+}
   
+  footer h3 {
+    text-align: center;
+    color: white;
+}
