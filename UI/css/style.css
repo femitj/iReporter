@@ -13,13 +13,14 @@ body{
 /* Header */
 
 header {
-    min-height: 70px;
+    min-height: 40px;
     padding:10px;
+    background-color: black;
   }
   
   header a {
     text-decoration: none;
-    color: black;
+    color: white;
     font: normal 22px "K2D", sans-serif;
   }
 
@@ -66,6 +67,7 @@ header {
 .btn:hover {
   background-image: linear-gradient(to left, rgb(73, 74, 76), green);
 }
+
   
 /* Footer */
 
