@@ -1,0 +1,24 @@
+{
+  "name": "iReporter",
+  "version": "1.0.0",
+  "description": "iReporter application provides a platform that can be used to report corruption or observation. Users can anonymously submit new reports, review existing reports, include location and track the status of problems of observations they have reported.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d UI"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/femitj/iReporter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/femitj/iReporter/issues"
+  },
+  "homepage": "https://github.com/femitj/iReporter",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
