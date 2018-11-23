@@ -25,3 +25,7 @@ tr:nth-child(even) {
 .delete:hover{
     color:gray;
 }
+
+#admin-footer {
+    position: absolute;
+}
