@@ -82,8 +82,9 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
+    position: relative;
     min-height: 65px;
-    margin-top: -50px;
+    margin-top: 50px;
 }
   
   footer h3 {
