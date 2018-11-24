@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Charmonman|Roboto|K2D");
 #register-area {
   min-height: 510px;
-  font-family: "K2D", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   flex: 1;
 }
 .register-body {
@@ -23,7 +22,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 200px;
-  padding: 0 25px 0px 25px;
+  padding: 0 25px 0 25px;
 }
 
 .register-box h1 {
@@ -85,9 +84,5 @@
   }
   #register-area {
     min-height: 850px;
-  }
-}
-@media (max-width: 1024px) {
-  #register-area {
   }
 }
