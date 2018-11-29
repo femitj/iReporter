@@ -32,15 +32,13 @@ class Incident {
     update(id,data) {
         const incident = this.findOne(id);
         const index = this.incidents.indexOf(incident);
-        this.incidents[index].createdBy = user.findOne();
         this.incidents[index].type = data['type'] || incident.type;
         this.incidents[index].location = data['location'] || incident.location;
         this.incidents[index].status = data['status'] || incident.status;
         this.incidents[index].comment = data['comment'] || incident.comment;
-        this.redFlagRecords[index].modifiedDate = moment.now()
+        this.incidents[index].modifiedDate = moment.now()
         return this.incidents[index];
     }
-<<<<<<< HEAD
 
     delete(id) {
         const incident = this.findOne(id);
@@ -48,8 +46,6 @@ class Incident {
         this.incidents.splice(index, 1);
         return {};
     }
-=======
->>>>>>> develop
 }
 
 export default new Incident();
