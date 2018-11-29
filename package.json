@@ -14,7 +14,7 @@
     "url": "git+https://github.com/femitj/iReporter.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tijani Femi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/femitj/iReporter/issues"
@@ -27,11 +27,12 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.1.6",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-watch": "^2.0.7",
     "chai": "^4.2.0",
+    "eslint": "^5.9.0",
     "mocha": "^5.2.0"
   }
-
 }
