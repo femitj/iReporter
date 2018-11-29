@@ -28,6 +28,18 @@ class Incident {
     findOne(id) {
         return this.incidents.find(incident => incident.id === id);
     }
+
+    update(id,data) {
+        const incident = this.findOne(id);
+        const index = this.incidents.indexOf(incident);
+        this.incidents[index].createdBy = user.findOne();
+        this.incidents[index].type = data['type'] || incident.type;
+        this.incidents[index].location = data['location'] || incident.location;
+        this.incidents[index].status = data['status'] || incident.status;
+        this.incidents[index].comment = data['comment'] || incident.comment;
+        this.redFlagRecords[index].modifiedDate = moment.now()
+        return this.incidents[index];
+    }
 }
 
 export default new Incident();
