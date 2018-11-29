@@ -14,6 +14,14 @@ const RedFlagRecord = {
         const redFlagRecords = RedFlagRecordModel.findAll();
         return res.status(200).send(redFlagRecords);
     },
+
+    getOne(req, res) {
+        const redFlagRecord = RedFlagRecordModel.findOne(req.params.id);
+        if (!redFlagRecord) {
+            return res.status(404).send({'message': 'red flag record not found'});
+        }
+        return res.status(200).send(redFlagRecord);
+    },
 }
 
 export default RedFlagRecord;

@@ -24,6 +24,10 @@ class Incident {
     findAll() {
         return this.incidents;
     }
+
+    findOne(id) {
+        return this.incidents.find(incident => incident.id === id);
+    }
 }
 
 export default new Incident();
