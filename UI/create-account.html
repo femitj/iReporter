@@ -1,0 +1,91 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/create-account.css"/>
+</head>
+
+<body class='register-body'>
+    <header>
+    <div class="container">
+        <div id="header-title">
+            <a href="./index.html">
+                <img src="./images/logo.png" alt="logo" />
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="./user-profile.html">User</a></li>
+                <li><a href="./admin-login.html">Admin</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <div class="register-showcase">
+    <section id="register-area">
+    <div class="container">
+        <div class="alert error">
+        <label class="close" title="close" for="alert1">
+            <i class="icon-remove"></i>
+        </label>
+        <p class="inner">
+            <!-- <strong>Warning!</strong> Wrong credentials -->
+        </p>
+        </div>
+        <form id="register_form" action="./user-profile.html">
+        <div class="register-box">
+            <h1>Sign Up</h1>
+            <div class="register-textbox">
+            <input
+                type="text"
+                placeholder="Fullname"
+                id="fullname"
+                required
+            />
+            </div>
+            <div class="register-textbox">
+            <input
+                type="text"
+                placeholder="Username"
+                id="username"
+                required
+            />
+            </div>
+            <div class="register-textbox">
+            <input type="text" placeholder="occupation" id="occupation" required />
+            </div>
+            <div class="register-textbox">
+            <input type="email" placeholder="Email" id="email" required />
+            </div>
+            <div class="register-textbox">
+            <input
+                type="password"
+                placeholder="Password"
+                id="password"
+                required
+            />
+            </div>
+            <input type="submit" value="SIGN UP" class="btn" />
+            <p>or <a href="./index.html"><em>login</em></a> if you have registered.</p>
+        </div>
+        </form>
+    </div>
+    </section>
+
+
+<br>
+
+    <footer>
+    <div class="container">
+        <h3>iReporter, &copy; 2018</h3>
+    </div>
+</footer>
+</div>
+        
+</body>
+</html>
