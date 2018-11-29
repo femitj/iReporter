@@ -7,7 +7,13 @@ const RedFlagRecord = {
         }
         const redFlagRecord = RedFlagRecordModel.create(req.body);
         return res.status(201).send(redFlagRecord); 
-    }
+    },
+
+    
+    getAll(req, res) {
+        const redFlagRecords = RedFlagRecordModel.findAll();
+        return res.status(200).send(redFlagRecords);
+    },
 }
 
 export default RedFlagRecord;
