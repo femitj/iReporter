@@ -20,6 +20,10 @@ class Incident {
         this.incidents.push(newIncident);
         return newIncident
     }
+
+    findAll() {
+        return this.incidents;
+    }
 }
 
 export default new Incident();
