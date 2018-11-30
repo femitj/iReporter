@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:@babel/register src/test/redFlag-test.js || true",
-    "build": "babel ./src/server.js --out-dir build",
-    "start": "nodemon --exec babel-node ./build/server.js",
+    "build": "babel src --out-dir build",
+    "start": "nodemon --exec babel-node ./src/server.js --env",
     "deploy": "gh-pages -d UI"
   },
   "repository": {
