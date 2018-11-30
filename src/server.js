@@ -1,10 +1,11 @@
 import express from 'express';
 import redFlagRoute from './routes/redFlagRecord';
+import dotenv from 'dotenv';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-
+dotenv.config();
 app.use(express.json());
 app.use('/', express.static('UI'));
 
@@ -13,8 +14,8 @@ app.get('/api/v1', (req, res) => {
     return res.status(200).send({'message': 'YAY! Congratulations! Your first endpoint is working'});
 })
 
-module.exports = app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
 });
 
-//export default server;
+module.exports = server;
