@@ -4,9 +4,9 @@
   "description": "iReporter application provides a platform that can be used to report corruption or observation. Users can anonymously submit new reports, review existing reports, include location and track the status of problems of observations they have reported.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:@babel/register src/test/redFlag-test.js || true",
     "build": "babel server.js --out-dir build",
-    "dev-start": "babel-watch ./src/server.js",
+    "start": "nodemon --exec babel-node ./src/server.js",
     "deploy": "gh-pages -d UI"
   },
   "repository": {
@@ -21,17 +21,23 @@
   },
   "homepage": "https://github.com/femitj/iReporter",
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "express": "^4.16.4",
+    "gh-pages": "^2.0.1",
     "moment": "^2.22.2",
+    "nodemon": "^1.18.7",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-watch": "^2.0.7",
     "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
     "eslint": "^5.9.0",
     "mocha": "^5.2.0"
   }
