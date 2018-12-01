@@ -4,17 +4,16 @@
   "description": "iReporter application provides a platform that can be used to report corruption or observation. Users can anonymously submit new reports, review existing reports, include location and track the status of problems of observations they have reported.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-register src/test/redFlag-test.js || true",
     "start": "nodemon src/server.js --exec babel-node",
-    "build": "babel src -d build",
+    "build": "babel src -d dist",
     "serve": "node build/server.js",
+    "test": "mocha --require babel-register test/redFlag-test.js || true",
     "deploy": "gh-pages -d UI"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/femitj/iReporter.git"
   },
-  "keywords": [],
   "author": "Tijani Femi",
   "license": "ISC",
   "bugs": {
