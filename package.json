@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon src/server.js --exec babel-node",
     "build": "babel src -d dist",
-    "serve": "node build/server.js",
+    "serve": "node dist/server.js",
     "test": "mocha --require babel-register test/redFlag-test.js || true",
     "deploy": "gh-pages -d UI"
   },
