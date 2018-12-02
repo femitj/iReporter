@@ -7,7 +7,8 @@
     "start": "nodemon src/server.js --exec babel-node",
     "build": "babel src -d dist",
     "serve": "node dist/server.js",
-    "test": "mocha --require babel-register test/redFlag-test.js || true",
+    "test": "nyc mocha --require babel-register test/redFlag-test.js --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "deploy": "gh-pages -d UI"
   },
   "repository": {
@@ -40,6 +41,7 @@
     "chai-http": "^4.2.0",
     "eslint": "^5.9.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.7",
+    "nyc": "^13.1.0"
   }
 }

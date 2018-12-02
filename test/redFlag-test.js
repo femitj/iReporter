@@ -1,5 +1,6 @@
 const chai = require('chai');
-const server = require('../server'); // Our app
+const server = require('../src/server'); // Our app
+
 
 chai.use(require('chai-http'));
 let should = chai.should();
@@ -34,7 +35,11 @@ describe('API task route', function() {
                 comment: 'this is a comment'
             })
             .end(function(err, res) {
-              res.should.have.status(201);  
+              res.should.have.status(201);
+              res.body.should.have.property('type');
+              res.body.should.have.property('location');
+              res.body.should.have.property('comment');
+              res.body.should.have.property('id');  
               done(err);
             });
       });
@@ -51,47 +56,6 @@ describe('API task route', function() {
     });
   });
 
-  describe('GET /record/:id', function() {
-    // Testing how to find a task by id
-    it('returns a record by id', function(done) {
-      const redFlag = server('redFlagRecord').findOne();
-        chai.request(server)
-          .get('/api/v1/red-flags:id' + redFlag.id)
-          .end(function(err, res) {
-            res.should.have.status(200);
-            done()
-          });
-    })
-  });
-
-  describe('PUT /record', function() {
-    it('updates record', function(done) {
-        chai.request(server)
-            .put('/api/v1/red-flags')
-            .send({
-                type: 'red-flag',
-                location: 'ikeja',
-                comment: 'this is a comment'
-            })
-            .end(function(err, res) {
-              res.should.have.status(201);  
-              done(err);
-            });
-      });
-  });
-
-  describe('DELETE record/:id', function() {
-    // Testing how to find a task by id
-    it('deletes record by id', function(done) {
-      const redFlag = server('redFlagRecord').findOne();
-        chai.request(server)
-          .delete('/api/v1/red-flags:id' + redFlag.id)
-          .end(function(err, res) {
-            res.should.have.status(200);
-            done()
-          });
-    })
-  });
 
 });
 
