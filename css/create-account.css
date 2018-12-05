@@ -15,7 +15,7 @@
   height: 100%;
 }
 .register-box {
-  width: 280px;
+  width: 60%;
   background-color: black;
   position: absolute;
   top: 25%;
@@ -83,6 +83,6 @@
     margin-top: 230px;
   }
   #register-area {
-    min-height: 850px;
+    margin-bottom: 40px;
   }
 }
