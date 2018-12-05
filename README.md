@@ -5,6 +5,7 @@ iReporter application provides a platform that can be used to report corruption 
 
 [![Build Status](https://travis-ci.com/femitj/iReporter.svg?branch=develop)](https://travis-ci.com/femitj/iReporter)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/1666d5e3576bbd745951/maintainability)](https://codeclimate.com/github/femitj/iReporter/maintainability)
 
 # Contributing
 * Fork this repository to your GitHub account
