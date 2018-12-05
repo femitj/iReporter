@@ -1,3 +1,13 @@
+.user-section {
+    width: 80%;
+    font: 'Segeo UI';
+}
+
+.createlink:hover {
+    color:red;
+}
+
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;

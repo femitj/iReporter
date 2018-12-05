@@ -1,6 +1,6 @@
 #login-area {
   min-height: 510px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segeo UI",'Frutiger'; 
   flex: 1;
 
 }
@@ -18,12 +18,12 @@
 }
 
 .login-box {
-  width: 280px;
+  width: 45%;
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 100px;
+  margin-top: 150px;
   background-color: black;
   padding: 20px;
 }
@@ -37,6 +37,10 @@
 
 .login-box p {
   color: white;
+}
+
+.login-box a {
+  color: gray;
 }
 
 .login-box a:hover {
@@ -99,6 +103,5 @@
     margin-top: 150px;
   }
   #login-area  {
-    min-height: 850px;
   }
 }
