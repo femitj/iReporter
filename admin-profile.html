@@ -21,38 +21,54 @@
             </div>
       </header>
 
-      <h2 class="all-record-info">all record</h2>
+
       <div class="container">
-      <input type="text" id="myInput" placeholder='Search by attendant name..'>
+        <h2 class="all-record-info">all record</h2>
+        <input type="text" id="myInput" placeholder='Search by user name..'>
          <table class="table3 searchTable">
-            <thead>
-               <tr>
-                  <th>ATTENDANT NAME</th>
-                  <th>ID</th>
-                  <th>RECORD TYPE</th>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-
-                  <th>OPERATION</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>view</td>
-                  <td id='post-status'>status</td>
-                  <td></td>
-
-                  <td><button class="delete">Delete</button><button class="edit">Edit</button></td>
-               </tr>
-               
-            </tbody>
-         </table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>CreatedOn</th>
+                    <th>CreatedBy</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                    <th>status</th>                    
+                </tr>
+              </thead>
+                <tr>
+                    <td>3456</td>
+                    <td>03/11/2018</td>
+                    <td>Tijani Femi</td>
+                    <td>intervention</td>
+                    <td>Surulere</td>
+                    <td>
+                        <select id='select-type' required>
+                            <option selected disabled hidden>Update Status</option>
+                            <option>Approved</option>
+                            <option>Draft</option>
+                            <option>Rejected</option>
+                        </select>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>3456</td>
+                    <td>03/11/2018</td>
+                    <td>Seun Ariori</td>
+                    <td>intervention</td>
+                    <td>Ilupeju</td>
+                    <td>
+                        <select id='select-type' required>
+                            <option selected disabled hidden>Update Status</option>
+                            <option>Approved</option>
+                            <option>Draft</option>
+                            <option>Rejected</option>
+                        </select>
+                    </td>
+                </tr>
+        </table>
          </div>
-      </div>
 
 <footer id='admin-footer'>
         <div class="container">
