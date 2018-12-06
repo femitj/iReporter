@@ -21,11 +21,9 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./create-redflag-record.html">Create Red Flag Record </a>
+                            <a href="./admin-profile.html">Admin</a>
                     </li>
-                    <li>
-                        <a href="./create-intervention-record.html">Create Intervention Record</a>
-                    </li>
+
                     <li>
                         <a href="#">View Records</a>
                     </li>
@@ -34,47 +32,82 @@
         </div>
     </header>
 
-    <div class='User-details'>
-        <div class= 'container'>
-            <ul>
-                    <li id='username'><a href="#"></a></li>
-                    <li id='fullname'><a href="#"></a></li>
-                    <li id='occupation'><a href="#"></a></li>
-                    <li id='email'><a href="#"></a></li>
-                </ul>
-        </div>
-    </div>
+    <section class='user-section'>
+        <div class='container'>
+        <div class='User-details'>
+                <div class= 'container'>
+                    <ul>
+                            <li id='username'>Username</li>
+                            <li id='lastname'>Lastname</li>
+                        </ul>
+                </div>
+            </div>
 
-    <div class='show-user-post'> 
-    <div class='container'>
-        <table>
-            <tr>
-              <th>id</th>
-              <th>Type</th>
-              <th>Detail</th>
-              <th>Status</th>
-              <th></th>
-              <th></th>
-            </tr>
-            <tr>
-              <td>1234</td>
-              <td>Intervention</td>
-              <td>Bad roads</td>
-              <td id='get-status'></td>
-              <td id='edit-record'>edit</td>
-              <td class='delete'>delete</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td class='edit'></td>
-              <td class=delete></td>
-            </tr>
-        </table>
+        <div class='create-redflag-record'>
+            <div class='container'>
+                <h1> Create Red-Flag Record</h1>
+                <p>Do you want to submit a form of corruption? OR need government intervention 
+                    (e.g repair bad road sections, collapsed bridges, flooding e.t.c). 
+                    <br> 
+                    Report!  Click <a class='createlink' href='./create-record.html'>HERE!</a></p>            
+            </div>
         </div>
-    </div>
+
+
+        <div id='showRecords'>
+            <div class='container'>
+                    <h1>Summary</h1>
+                    <div class="Summary">
+                        Resolved : <span class="sum">2</span> resolved records
+                        <br>
+                        Draft : <span class="sum">5</span> records under Investigaton 
+                        <br>
+                        Rejected : <span class="sum">3</span> records have been rejected
+                    </div>
+                
+                
+                <h2>View Records</h2>
+                <p>Show, edit and delete records here</p>
+                <div class='tbody'>
+                <table>
+                        <thead>
+                        <tr>
+                            <th>CreatedOn</th>
+                            <th>Type</th> 
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>More</th>
+                        </tr>
+                      </thead>
+                        <tr>
+                          <td>03/11/2018</td>
+                          <td>red flag</td>
+                          <td>Badagry</td>
+                          <td>draft</td>
+                          <td>
+                            <button class="edit">edit</buttpn>
+                            <button class="delete">delete</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>01/06/2018</td>
+                          <td>intervention</td>
+                          <td>Apapa</td>
+                          <td>rejected</td>
+                          <td>
+                            <button class="edit">edit</buttpn>
+                            <button class="delete">delete</button>
+                          </td>
+                        </tr>
+
+                      </table>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
     <footer id='user-footer'>
         <div class="container">
             <h3>iReporter, &copy; 2018</h3>

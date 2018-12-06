@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/create-redflag.css" rel="stylesheet" type="text/css">             
+    <link href="css/create-record.css" rel="stylesheet" type="text/css">             
     <title>iReporter/Create Red flag</title>
 </head>
 
@@ -21,7 +21,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./admin-login.html">Admin</a>
+                        <a href="./user-profile.html">User profile</a>
                     </li>
                 </ul>
             </nav>
@@ -30,14 +30,28 @@
     
     <section id="create-record">
         <form class="submission-form">
-            <h1>Create Red Flag Record</h1>
-            <input type="text" id="report-issue" placeholder="Incident" required>
-            <input type="date" id="date" placeholder="date" required>
-            <textarea placeholder="Details" required></textarea>
-            <input type="file" id="image">
+            <h1>Create Record</h1>
+    
+            <select id='select-type' required>
+                <option selected disabled hidden>Select Incident Type</option>
+                <option value='red-flag'>Red-flag record (form of corruption)</option>
+                <option value='intervention'>Intervention record (Government intervention)</option>
+            </select>
+            
+            <input class='inputBttn' type="date" id="date" placeholder="date" required>
+
+            <textarea placeholder="Details" id='comment' required></textarea>
+            
+            <div class='inputBttn'>
+                <label for="imageUpload">Upload an Image: </label>
+                <input type="file" id="imageUpload" title ='imageupload' accept="image/png, image/jpeg" multiple>
+            </div>
+
             <button onclick="getLocation()">Add Geolocation</button>
             <p id='showLocation'></p>
-            <input type="submit" value="SUBMIT REPORT" id="sendButton">
+            
+            <input class='inputBttn' type="submit" value="SUBMIT REPORT" id="sendButton">
+            
         </form>
     </section>
 

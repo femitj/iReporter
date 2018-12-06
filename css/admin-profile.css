@@ -1,7 +1,16 @@
+.tbody {
+    width:80%;
+    padding:5%;
+    border-radius: 2%;
+    border-left:none;
+    box-shadow: 5px 10px 8px 10px #f8f6f6;
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    background-color:#f4f4f4;
     margin-bottom: 210px
 }
 
@@ -27,5 +36,5 @@ tr:nth-child(even) {
 }
 
 #admin-footer {
-    position: absolute;
+    position: relative;
 }
