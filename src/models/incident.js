@@ -13,6 +13,8 @@ class Incident {
             type: data.type || '',
             location: data.location || '',
             status: data.status || '',
+            images: ['Image,Image'],
+            videos: ['Video, Video'],
             comment: data.comment || '',
             modifiedDate: moment.now()
         };
