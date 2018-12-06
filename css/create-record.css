@@ -1,43 +1,42 @@
 #red-flag-body{
-    background-color: #f4f4f4;
-    margin:0;
-    padding:0;
+  background-color: #f4f4f4;
+  margin:0;
+  padding:0;
 }
 
 
 
 #create-record {
-  min-height: 510px;
-  font-family: "K2D", sans-serif;
+min-height: 510px;
+font-family: "K2D", sans-serif;
 }
 
 #create-record h1 {
-  font-size: 40px;
-  text-align: center;
-  color: black;
+font-size: 40px;
+text-align: center;
+color: black;
 }
 
 .submission-form {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 5px;
-  margin-bottom: 100px;
+max-width: 500px;
+margin: 2rem auto;
+padding: 2rem;
+border-radius: 5px;
+margin-bottom: 100px;
 }
 
 .inputBttn,
 textarea,select {
-  display: block;
-  width: 100%;
-  border: 3px solid black;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 5px;
-  margin: 10px;
+display: block;
+width: 100%;
+border: 3px solid black;
+padding: 10px;
+font-size: 18px;
+border-radius: 5px;
+margin: 10px;
 }
 
 #sendButton {
-<<<<<<< HEAD:css/create-record.css
 border: 0;
 background: green;
 padding: 10px;
@@ -51,13 +50,3 @@ cursor: pointer;
   position: relative;
 }
 
-=======
-  border: 0;
-  background: green;
-  padding: 10px;
-  color: white;
-  margin: 1rem 0;
-  width: auto;
-  cursor: pointer;
-}
->>>>>>> 661ea12c09c014ffdd903b33b67f81812a9f007c:css/create-redflag.css
