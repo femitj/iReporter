@@ -13,6 +13,8 @@ class Incident {
             type: data.type || '',
             location: data.location || '',
             status: data.status || '',
+            images: ['Image,Image'],
+            videos: ['Video, Video'],
             comment: data.comment || '',
             modifiedDate: moment.now()
         };
@@ -37,6 +39,20 @@ class Incident {
         this.incidents[index].status = data['status'] || incident.status;
         this.incidents[index].comment = data['comment'] || incident.comment;
         this.incidents[index].modifiedDate = moment.now()
+        return this.incidents[index];
+    }
+
+    updateLocation(id,data) {
+        const incident = this.findOne(id);
+        const index = this.incidents.indexOf(incident);
+        this.incidents[index].location = data['location'] || incident.location;
+        return this.incidents[index];
+    }
+
+    updateComment(id,data) {
+        const incident = this.findOne(id);
+        const index = this.incidents.indexOf(incident);
+        this.incidents[index].comment = data['comment'] || incident.comment;
         return this.incidents[index];
     }
 
