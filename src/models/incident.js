@@ -42,6 +42,20 @@ class Incident {
         return this.incidents[index];
     }
 
+    updateLocation(id,data) {
+        const incident = this.findOne(id);
+        const index = this.incidents.indexOf(incident);
+        this.incidents[index].location = data['location'] || incident.location;
+        return this.incidents[index];
+    }
+
+    updateComment(id,data) {
+        const incident = this.findOne(id);
+        const index = this.incidents.indexOf(incident);
+        this.incidents[index].comment = data['comment'] || incident.comment;
+        return this.incidents[index];
+    }
+
     delete(id) {
         const incident = this.findOne(id);
         const index = this.incidents.indexOf(incident);
