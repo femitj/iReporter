@@ -1,5 +1,6 @@
 import express from 'express';
 import RedFlagRecord from '../controllers/RedFlagRecord';
+import checkLocation from '../helpers/checks'
 
 const router = express.Router();
 
