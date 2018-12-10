@@ -1,8 +1,11 @@
 import express from 'express';
 const bodyParser = require('body-parser');
 //import redFlagRoute from './routes/redFlagRecord';
+import userRoutes from './usingDB/routes/userRoutes';
 import dotenv from 'dotenv';
+import 'babel-polyfill';
 
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -16,7 +19,9 @@ app.use('/', express.static('UI'));
 app.get('/api/v1', (req, res) => {
     return res.status(200).send({'message': 'YAY! Congratulations! Your first endpoint is working'});
 })
+
 //app.use(redFlagRoute);
+app.use(userRoutes);
 
 const server = app.listen(PORT, () => {
     console.log(`server running on port ${PORT}`);
