@@ -8,5 +8,8 @@ const router = express.Router();
 // add a user
 router.post('/api/v1/auth/users', userController.create);
 
+// login a user
+router.post('/api/v1/auth/login', userController.login);
+
 
 module.exports = router;
