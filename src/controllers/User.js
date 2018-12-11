@@ -37,13 +37,7 @@ const User = {
     },
 
   async login(req, res) {
-    if (!req.body.email || !req.body.password) {
-        console.log(req.body)
-        return res.status(400).send({'message': 'Some values are missing'});
-    }
-    if (!Helper.isValidEmail(req.body.email)) {
-        return res.status(400).send({ 'message': 'Please enter a valid email address' });
-    }
+
     const text = 'SELECT * FROM users WHERE email = $1';
       try {
         const { rows } = await db.query(text, [req.body.email]);
