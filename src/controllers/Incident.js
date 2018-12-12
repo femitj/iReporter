@@ -22,7 +22,6 @@ static async create(req, res) {
 
   try {
     const { rows } = await db.query(createQuery, values);
-    console.log('here')
     return res.status(201).send({
       status: 201,
       data: [
@@ -77,7 +76,31 @@ static async getAll(req, res) {
   }
 }
 
-
+static async updateLocation(req, res) {
+  const updateLocationQuery = `UPDATE incidents SET location = $3 WHERE id = $1 AND createdBy = $2 AND status = $4
+  returning *`;
+  const values = [
+    req.body.id,
+    req.user.id,
+    req.body.location,
+    'draft'
+  ];
+  try{
+    const { rows } = await db.query(updateLocationQuery, values);
+    return res.status(201).send({
+      status: 201,
+      data: [
+        {
+          id: rows[0].id,
+          message: 'Updated Incident Record Location'
+        }        
+      ]
+    })
+    }
+    catch(error) {
+      return res.status(400).send(error);
+    }
+  }
 
 
 }
