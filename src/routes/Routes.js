@@ -17,5 +17,7 @@ router.post('/api/v1/auth/login', checkUser, userController.login);
 router.post('/api/v1/incidents', Auth.verifyToken, IncidentController.create);
 // get a specific incident:id
 router.get('/api/v1/incidents/:id', Auth.verifyToken, IncidentController.get);
+// get ALL incident
+router.get('/api/v1/incidents', Auth.verifyToken, IncidentController.getAll);
 
 module.exports = router;

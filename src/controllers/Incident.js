@@ -59,6 +59,25 @@ static async get(req, res) {
   }
 }
 
+static async getAll(req, res) {
+  const getAllIncident = 'SELECT * FROM incidents where createdBy = $1';
+  try {
+    const { rows, rowCount } = await db.query(getAllIncident, [req.user.id]);
+    return res.status(200).send({
+      status: 200,
+      data: [
+        {
+          data: rows,
+        }
+      ]
+    });
+  } 
+  catch(error) {
+    return res.status(400).send(error);
+  }
+}
+
+
 
 
 }
