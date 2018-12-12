@@ -92,7 +92,7 @@ static async updateLocation(req, res) {
       data: [
         {
           id: rows[0].id,
-          message: 'Updated Incident Record Location'
+          message: 'Updated Incident Records Location'
         }        
       ]
     })
@@ -118,7 +118,7 @@ static async updateLocation(req, res) {
         data: [
           {
             id: rows[0].id,
-            message: 'Updated Incident Record Comment'
+            message: 'Updated Incident Records Comment'
           }        
         ]
       })
@@ -128,8 +128,27 @@ static async updateLocation(req, res) {
       }
     }
 
-
-
+  static async delete(req, res) {		
+    const deleteQuery = 'DELETE FROM incidents WHERE id=$1 AND createdBy = $2 returning *';
+    try {
+      const { rows } = await db.query(deleteQuery, [req.params.id, req.user.id]);
+      if(!rows[0]) {
+        return res.status(404).send({'message': 'incident not found'});
+      }
+      return res.status(204).send({
+        status: 204,
+        data: [
+          {
+            id: rows[0].id,
+            message: 'Incident record has been deleted'
+          }
+        ]
+      });
+    } 
+    catch(error) {
+      return res.status(400).send(error);
+    }
+  }
 }
 
 export default Incident;
