@@ -37,6 +37,30 @@ static async create(req, res) {
     return res.status(400).send(error);
   }
 }
+
+static async get(req, res) {
+  const text = 'SELECT * FROM incidents WHERE id = $1 AND createdBy = $2';
+  try {
+    const { rows } = await db.query(text, [req.params.id, req.user.id]);
+    if (!rows[0]) {
+      return res.status(404).send({'message': 'incident not found'});
+    }
+    return res.status(200).send({
+      status: 200,
+      data: [
+        {
+          data: rows[0],
+        }
+      ]
+    })
+  } 
+  catch(error) {
+    return res.status(400).send(error)
+  }
+}
+
+
+
 }
 
 export default Incident;

@@ -14,6 +14,8 @@ router.post('/api/v1/auth/login', checkUser, userController.login);
 
 //INTERVENTION ROUTE
 // create intervention
-router.post('/api/v1/interventions', Auth.verifyToken, IncidentController.create);
+router.post('/api/v1/incidents', Auth.verifyToken, IncidentController.create);
+// get a specific incident:id
+router.get('/api/v1/incidents/:id', Auth.verifyToken, IncidentController.get);
 
 module.exports = router;
