@@ -34,8 +34,36 @@ const createuserTables = () => {
     });
 }
 
+const createIncident = () => {
+  const queryText =
+    `CREATE TABLE IF NOT EXISTS
+      incidents(
+        id SERIAL PRIMARY KEY NOT NULL,
+        type VARCHAR(128) NOT NULL,
+        comment VARCHAR(128) NOT NULL,
+        location VARCHAR(128) NOT NULL,
+        status VARCHAR(128) DEFAULT 'draft',
+        images TEXT[],
+        videos TEXT[],
+        createdBy INTEGER NOT NULL,
+        createdOn VARCHAR(128) NOT NULL,
+        FOREIGN KEY(createdBy) REFERENCES users(id) ON DELETE CASCADE 
+      )`;
+
+      pool.query(queryText)
+    .then((res) => {
+      console.log(res);
+      pool.end();
+    })
+    .catch((err) => {
+      console.log(err);
+      pool.end();
+    });
+  }
+
 module.exports = {
   createuserTables,
+  createIncident
 };
 
 require('make-runnable');
