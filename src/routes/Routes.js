@@ -20,6 +20,8 @@ router.get('/api/v1/incidents/:id', Auth.verifyToken, IncidentController.get);
 // get ALL incident
 router.get('/api/v1/incidents', Auth.verifyToken, IncidentController.getAll);
 // update location
-router.patch('/api/v1/incidents/:id', Auth.verifyToken, IncidentController.updateLocation);
+router.patch('/api/v1/incidents/:id/location', Auth.verifyToken, IncidentController.updateLocation);
+//update comment
+router.patch('/api/v1/incidents/:id/comment', Auth.verifyToken, IncidentController.updateComment);
 
 module.exports = router;

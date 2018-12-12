@@ -102,6 +102,33 @@ static async updateLocation(req, res) {
     }
   }
 
+  static async updateComment(req, res) {
+    const updateCommentQuery = `UPDATE incidents SET comment = $4 WHERE id = $1 AND createdBy = $2 AND status = $3
+    returning *`;
+    const values = [
+      req.body.id,
+      req.user.id,
+      'draft',
+      req.body.comment
+    ];
+    try{
+      const { rows } = await db.query(updateCommentQuery, values);
+      return res.status(201).send({
+        status: 201,
+        data: [
+          {
+            id: rows[0].id,
+            message: 'Updated Incident Record Comment'
+          }        
+        ]
+      })
+      }
+      catch(error) {
+        return res.status(400).send(error);
+      }
+    }
+
+
 
 }
 
