@@ -23,5 +23,7 @@ router.get('/api/v1/incidents', Auth.verifyToken, IncidentController.getAll);
 router.patch('/api/v1/incidents/:id/location', Auth.verifyToken, IncidentController.updateLocation);
 //update comment
 router.patch('/api/v1/incidents/:id/comment', Auth.verifyToken, IncidentController.updateComment);
+//delete a specific incident
+router.delete('/api/v1/incidents/:id', Auth.verifyToken, IncidentController.delete);
 
 module.exports = router;
