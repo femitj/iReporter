@@ -1,15 +1,28 @@
 import express from 'express';
-import redFlagRoute from './routes/redFlagRecord';
+const bodyParser = require('body-parser');
+import routes from './routes/Routes';
+import dotenv from 'dotenv';
+import 'babel-polyfill';
 
+dotenv.config();
 const app = express();
+const PORT = process.env.PORT || 8080;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 app.use(express.json());
-app.use('/', express.static(__dirname + '/UI'));
+app.use('/', express.static('UI'));
 
-app.use(redFlagRoute);
 app.get('/api/v1', (req, res) => {
     return res.status(200).send({'message': 'YAY! Congratulations! Your first endpoint is working'});
 })
 
-app.listen(3000)
-console.log('app running on port ', 3000);
+app.use(routes);
+
+const server = app.listen(PORT, () => {
+    console.log(`server running on port ${PORT}`);
+});
+
+module.exports = server;
