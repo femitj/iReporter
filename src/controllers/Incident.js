@@ -87,6 +87,7 @@ static async updateLocation(req, res) {
   ];
   try{
     const { rows } = await db.query(updateLocationQuery, values);
+    console.log(rows);
     return res.status(201).send({
       status: 201,
       data: [
