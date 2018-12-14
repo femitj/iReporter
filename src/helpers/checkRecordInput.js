@@ -2,7 +2,7 @@ const checkRecordInput = (req, res, next) => {
   // User details
   const {
     location,
-    comments,
+    comment,
   } = req.body;
   if (location === '' || location === null || location === undefined) {
     // Price field empty
