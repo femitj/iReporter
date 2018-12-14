@@ -11,7 +11,7 @@ const checkRecordInput = (req, res, next) => {
       error: 'location cannot be empty',
     });
   }
-  if (comments === '' || comments === null || comments === undefined) {
+  if (comment === '' || comment === null || comment === undefined) {
     // Location field empty
     return res.status(400).json({
       status: 400,
